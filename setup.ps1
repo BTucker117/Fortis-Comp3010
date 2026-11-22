@@ -73,7 +73,10 @@ if ($LASTEXITCODE -ne 0) {
     }
 
     if (Test-Path "$venvPy") {
-        & $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python 2>$null | Out-Null
+        #& $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python 2>$null | Out-Null #Original - FAIL
+        Invoke-Native { #Use the Invoke-Native method
+            & $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python
+        }
         $LASTEXITCODE = 0
     }
 
@@ -137,7 +140,14 @@ if ($LASTEXITCODE -ne 0) {
 # 5. offline self-test (fast, no model download)
 Write-Host "  [..] Running offline sanity tests..."
 $env:EMBEDDING_BACKEND = "hash-stub"
-Invoke-Native { & $venvPy -m pytest desktop\tests\ -q --no-header 2>&1 } | Select-Object -Last 15
+#Invoke-Native { & $venvPy -m pytest desktop\tests\ -q --no-header 2>&1 } | Select-Object -Last 15 # Not working
+# Checks what exactly is failing
+Write-Host "  [..] Running offline sanity tests..."
+$env:EMBEDDING_BACKEND = "hash-stub"
+
+Invoke-Native { & $venvPy -m pytest desktop\tests\ -vv --tb=long --show-capture=all }
+#
+
 if ($LASTEXITCODE -ne 0) {
     Write-Host "  [X] Self-test failed - see output above" -ForegroundColor Red
     Read-Host "  Press Enter to exit"

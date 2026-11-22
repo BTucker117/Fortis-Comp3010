@@ -1,0 +1,1207 @@
+Windows PowerShell 5.1
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\ben20> cd Users\ben20\Documents\GitHub\Fortis-Comp3010
+cd : Cannot find path 'C:\Users\ben20\Users\ben20\Documents\GitHub\Fortis-Comp3010' because it does not exist.
+At line:1 char:1
++ cd Users\ben20\Documents\GitHub\Fortis-Comp3010
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\ben20\...Fortis-Comp3010:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\ben20> cd Documents\GitHub\Fortis-Comp3010
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> ^C
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [..] Creating virtual environment (one-time)...
+  [..] Installing dependencies (first run only, ~5 min)...
+Collecting fastapi (from -r requirements.txt (line 1))
+  Downloading fastapi-0.165.0-py3-none-any.whl.metadata (27 kB)
+Collecting python-multipart (from -r requirements.txt (line 3))
+  Downloading python_multipart-0.0.34-py3-none-any.whl.metadata (6.3 kB)
+Collecting pydantic (from -r requirements.txt (line 4))
+  Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Collecting chromadb (from -r requirements.txt (line 6))
+  Downloading chromadb-1.5.9-cp39-abi3-win_amd64.whl.metadata (5.1 kB)
+Collecting sentence-transformers (from -r requirements.txt (line 7))
+  Downloading sentence_transformers-6.3.0-py3-none-any.whl.metadata (20 kB)
+Collecting rank-bm25 (from -r requirements.txt (line 8))
+  Downloading rank_bm25-0.2.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pymupdf (from -r requirements.txt (line 10))
+  Downloading pymupdf-2.1-cp311-abi3-win_amd64.whl.metadata (26 kB)
+Collecting python-docx (from -r requirements.txt (line 11))
+  Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting python-pptx (from -r requirements.txt (line 12))
+  Downloading python_pptx-1.0.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting openpyxl (from -r requirements.txt (line 13))
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting reportlab (from -r requirements.txt (line 15))
+  Downloading reportlab-5.1.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting markdown-it-py (from -r requirements.txt (line 16))
+  Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting huggingface_hub>=0.26 (from -r requirements.txt (line 17))
+  Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+Collecting matplotlib>=3.11.2 (from -r requirements.txt (line 18))
+  Downloading matplotlib-3.11.2-cp312-cp312-win_amd64.whl.metadata (80 kB)
+Collecting pywebview (from -r requirements.txt (line 20))
+  Downloading pywebview-6.2.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pytest (from -r requirements-dev.txt (line 2))
+  Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting httpx (from -r requirements-dev.txt (line 3))
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting uvicorn[standard] (from -r requirements.txt (line 2))
+  Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting starlette>=1.6.0 (from fastapi->-r requirements.txt (line 1))
+  Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting anyio>=4.1.0 (from fastapi->-r requirements.txt (line 1))
+  Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements.txt (line 1))
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements.txt (line 1))
+  Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi->-r requirements.txt (line 1))
+  Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+Collecting click>=7.0 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting httptools>=0.8.0 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading httptools-0.9.0-cp312-cp312-win_amd64.whl.metadata (3.7 kB)
+Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading pyyaml-6.0.4-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Collecting websockets>=13.0 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Downloading websockets-17.4-cp312-cp312-win_amd64.whl.metadata (6.5 kB)
+Collecting annotated-types>=0.6.0 (from pydantic->-r requirements.txt (line 4))
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.5 (from pydantic->-r requirements.txt (line 4))
+  Downloading pydantic_core-2.50.5-cp312-cp312-win_amd64.whl.metadata (6.7 kB)
+Collecting build>=1.0.3 (from chromadb->-r requirements.txt (line 6))
+  Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting pydantic-settings>=2.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting pybase64>=1.4.1 (from chromadb->-r requirements.txt (line 6))
+  Downloading pybase64-1.5.2-cp312-cp312-win_amd64.whl.metadata (12 kB)
+Collecting numpy>=1.22.5 (from chromadb->-r requirements.txt (line 6))
+  Downloading numpy-2.5.5-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting onnxruntime>=1.14.1 (from chromadb->-r requirements.txt (line 6))
+  Downloading onnxruntime-1.32.0-cp312-cp312-win_amd64.whl.metadata (6.1 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting opentelemetry-sdk>=1.2.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting tokenizers>=0.13.2 (from chromadb->-r requirements.txt (line 6))
+  Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl.metadata (10 kB)
+Collecting pypika>=0.48.9 (from chromadb->-r requirements.txt (line 6))
+  Downloading pypika-0.51.1-py2.py3-none-any.whl.metadata (51 kB)
+Collecting tqdm>=4.65.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting overrides>=7.3.1 (from chromadb->-r requirements.txt (line 6))
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting importlib-resources (from chromadb->-r requirements.txt (line 6))
+  Downloading importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting grpcio>=1.58.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading grpcio-1.85.3-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
+Collecting bcrypt>=4.0.1 (from chromadb->-r requirements.txt (line 6))
+  Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB)
+Collecting typer>=0.9.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading typer-0.29.2-py3-none-any.whl.metadata (16 kB)
+Collecting kubernetes>=28.1.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading kubernetes-37.0.3-py2.py3-none-any.whl.metadata (1.9 kB)
+Collecting tenacity>=8.2.3 (from chromadb->-r requirements.txt (line 6))
+  Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting mmh3>=4.0.1 (from chromadb->-r requirements.txt (line 6))
+  Downloading mmh3-5.3.1-cp312-cp312-win_amd64.whl.metadata (14 kB)
+Collecting orjson>=3.9.12 (from chromadb->-r requirements.txt (line 6))
+  Downloading orjson-3.13.0-cp312-cp312-win_amd64.whl.metadata (43 kB)
+Collecting rich>=10.11.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting jsonschema>=4.19.0 (from chromadb->-r requirements.txt (line 6))
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting transformers<6.0.0,>=5.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading transformers-5.24.0-py3-none-any.whl.metadata (31 kB)
+Collecting torch>=2.2 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading torch-2.15.0-cp312-cp312-win_amd64.whl.metadata (36 kB)
+Collecting scikit-learn>=1.1.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading scikit_learn-1.9.1-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting scipy>=1.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading scipy-1.18.1-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting networkx (from pymupdf->-r requirements.txt (line 10))
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting pymupdf-layout==2.1 (from pymupdf->-r requirements.txt (line 10))
+  Downloading pymupdf_layout-2.1-py3-none-any.whl.metadata (657 bytes)
+Collecting psutil (from pymupdf->-r requirements.txt (line 10))
+  Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Collecting tabulate (from pymupdf->-r requirements.txt (line 10))
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting pymupdf4llm==2.1 (from pymupdf->-r requirements.txt (line 10))
+  Downloading pymupdf4llm-2.1-py3-none-any.whl.metadata (648 bytes)
+Collecting lxml>=3.1.0 (from python-docx->-r requirements.txt (line 11))
+  Downloading lxml-6.1.3-cp312-cp312-win_amd64.whl.metadata (3.4 kB)
+Collecting Pillow>=3.3.2 (from python-pptx->-r requirements.txt (line 12))
+  Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting XlsxWriter>=0.5.7 (from python-pptx->-r requirements.txt (line 12))
+  Downloading xlsxwriter-3.3.4-py3-none-any.whl.metadata (3.2 kB)
+Collecting et-xmlfile (from openpyxl->-r requirements.txt (line 13))
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting charset-normalizer (from reportlab->-r requirements.txt (line 15))
+  Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl.metadata (47 kB)
+Collecting mdurl~=0.1 (from markdown-it-py->-r requirements.txt (line 16))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting filelock>=3.10.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading filelock-4.3.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting fsspec>=2023.5.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+Collecting httpx2<3,>=2.0.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+Collecting packaging>=20.9 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading contourpy-1.4.0-cp312-cp312-win_amd64.whl.metadata (3.8 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading fonttools-4.68.0-cp312-cp312-win_amd64.whl.metadata (142 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading kiwisolver-1.5.1-cp312-cp312-win_amd64.whl.metadata (5.2 kB)
+Collecting pyparsing>=3 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pythonnet (from pywebview->-r requirements.txt (line 20))
+  Downloading pythonnet-3.2.1-cp311.cp312.cp313.cp314.cp315-none-any.whl.metadata (6.5 kB)
+Collecting proxy_tools (from pywebview->-r requirements.txt (line 20))
+  Downloading proxy_tools-0.1.0.tar.gz (3.0 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting bottle (from pywebview->-r requirements.txt (line 20))
+  Downloading bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting colorama>=0.4 (from pytest->-r requirements-dev.txt (line 2))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=2 (from pytest->-r requirements-dev.txt (line 2))
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting pluggy<2,>=1.6 (from pytest->-r requirements-dev.txt (line 2))
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.15 (from pytest->-r requirements-dev.txt (line 2))
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting certifi (from httpx->-r requirements-dev.txt (line 3))
+  Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements-dev.txt (line 3))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements-dev.txt (line 3))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting pyproject_hooks (from build>=1.0.3->chromadb->-r requirements.txt (line 6))
+  Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+Collecting httpcore2==2.16.2 (from httpx2<3,>=2.0.0->huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Downloading rpds_py-2026.9.1-cp312-cp312-win_amd64.whl.metadata (4.2 kB)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting requests (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting requests-oauthlib (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting oauthlib>=4.0.0 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading oauthlib-4.0.1-py3-none-any.whl.metadata (8.6 kB)
+Collecting urllib3<3.0.0,>=2.8.0 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting durationpy>=0.11 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading durationpy-0.11-py3-none-any.whl.metadata (474 bytes)
+Collecting aiohttp<4.0.0,>=3.14.5 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading aiohttp-3.14.5-cp312-cp312-win_amd64.whl.metadata (8.5 kB)
+Collecting aiohttp-retry>=2.9.1 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+Collecting flatbuffers (from onnxruntime>=1.14.1->chromadb->-r requirements.txt (line 6))
+  Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting protobuf>=4.25.8 (from onnxruntime>=1.14.1->chromadb->-r requirements.txt (line 6))
+  Downloading protobuf-7.36.2-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Downloading googleapis_common_protos-1.76.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting opentelemetry-exporter-otlp-common==0.66b2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl.metadata (1.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+Collecting tzdata (from python-dateutil>=2.7->matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting joblib>=1.4.0 (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading narwhals-2.29.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+Collecting setuptools>=77.0.3 (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+Collecting sympy>=1.13.3 (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting jinja2 (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting regex>=2025.10.22 (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading regex-2026.11.19-cp312-cp312-win_amd64.whl.metadata (41 kB)
+Collecting safetensors>=0.8.0 (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl.metadata (4.2 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.9.0->chromadb->-r requirements.txt (line 6))
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting clr_loader<0.4.0,>=0.3.1 (from pythonnet->pywebview->-r requirements.txt (line 20))
+  Downloading clr_loader-0.3.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading frozenlist-1.8.0-cp312-cp312-win_amd64.whl.metadata (21 kB)
+Collecting multidict<8.0,>=4.5 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading multidict-7.2.1-cp312-cp312-win_amd64.whl.metadata (6.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading propcache-0.5.4-cp312-cp312-win_amd64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Downloading yarl-1.25.1-cp312-cp312-win_amd64.whl.metadata (115 kB)
+Collecting cffi>=1.17 (from clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements.txt (line 20))
+  Downloading cffi-2.1.1-cp312-cp312-win_amd64.whl.metadata (2.6 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.4.0->scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading cloudpickle-3.1.3-py3-none-any.whl.metadata (7.1 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Downloading markupsafe-3.0.4-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Collecting pycparser (from cffi>=1.17->clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements.txt (line 20))
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Downloading fastapi-0.165.0-py3-none-any.whl (159 kB)
+Downloading python_multipart-0.0.34-py3-none-any.whl (32 kB)
+Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Downloading pydantic_core-2.50.5-cp312-cp312-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 8.5 MB/s eta 0:00:00
+Downloading chromadb-1.5.9-cp39-abi3-win_amd64.whl (23.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.5/23.5 MB 9.0 MB/s eta 0:00:00
+Downloading sentence_transformers-6.3.0-py3-none-any.whl (780 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.3/780.3 kB 8.4 MB/s eta 0:00:00
+Downloading rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+Downloading pymupdf-2.1-cp311-abi3-win_amd64.whl (63.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.0/63.0 MB 9.2 MB/s eta 0:00:00
+Downloading pymupdf_layout-2.1-py3-none-any.whl (1.0 kB)
+Downloading pymupdf4llm-2.1-py3-none-any.whl (1.0 kB)
+Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+Downloading python_pptx-1.0.2-py3-none-any.whl (472 kB)
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Downloading reportlab-5.1.0-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 4.5 MB/s eta 0:00:00
+Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 7.6 MB/s eta 0:00:00
+Downloading matplotlib-3.11.2-cp312-cp312-win_amd64.whl (9.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 5.9 MB/s eta 0:00:00
+Downloading pywebview-6.2.1-py3-none-any.whl (525 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 525.5/525.5 kB 5.6 MB/s eta 0:00:00
+Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB)
+Downloading build-1.6.1-py3-none-any.whl (31 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading contourpy-1.4.0-cp312-cp312-win_amd64.whl (234 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading filelock-4.3.0-py3-none-any.whl (244 kB)
+Downloading fonttools-4.68.0-cp312-cp312-win_amd64.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 8.1 MB/s eta 0:00:00
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading grpcio-1.85.3-cp312-cp312-win_amd64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 7.1 MB/s eta 0:00:00
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 9.0 MB/s eta 0:00:00
+Downloading httptools-0.9.0-cp312-cp312-win_amd64.whl (92 kB)
+Downloading httpx2-2.16.2-py3-none-any.whl (97 kB)
+Downloading httpcore2-2.16.2-py3-none-any.whl (85 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading kiwisolver-1.5.1-cp312-cp312-win_amd64.whl (70 kB)
+Downloading kubernetes-37.0.3-py2.py3-none-any.whl (7.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 6.5 MB/s eta 0:00:00
+Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Downloading lxml-6.1.3-cp312-cp312-win_amd64.whl (4.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 8.0 MB/s eta 0:00:00
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading mmh3-5.3.1-cp312-cp312-win_amd64.whl (41 kB)
+Downloading numpy-2.5.5-cp312-cp312-win_amd64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 7.5 MB/s eta 0:00:00
+Downloading onnxruntime-1.32.0-cp312-cp312-win_amd64.whl (16.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 6.6 MB/s eta 0:00:00
+Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl (19 kB)
+Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl (15 kB)
+Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+Downloading orjson-3.13.0-cp312-cp312-win_amd64.whl (121 kB)
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl (7.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 5.3 MB/s eta 0:00:00
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pybase64-1.5.2-cp312-cp312-win_amd64.whl (44 kB)
+Downloading pydantic_settings-2.16.3-py3-none-any.whl (82 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 6.3 MB/s eta 0:00:00
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading pypika-0.51.1-py2.py3-none-any.whl (60 kB)
+Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading pyyaml-6.0.4-cp312-cp312-win_amd64.whl (154 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading scikit_learn-1.9.1-cp312-cp312-win_amd64.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 6.7 MB/s eta 0:00:00
+Downloading scipy-1.18.1-cp312-cp312-win_amd64.whl (36.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.7/36.7 MB 7.1 MB/s eta 0:00:00
+Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+Downloading tenacity-9.2.1-py3-none-any.whl (32 kB)
+Downloading tokenizers-0.23.3-cp310-abi3-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 7.6 MB/s eta 0:00:00
+Downloading torch-2.15.0-cp312-cp312-win_amd64.whl (126.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.7/126.7 MB 5.1 MB/s eta 0:00:00
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 2.2 MB/s eta 0:00:00
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading transformers-5.24.0-py3-none-any.whl (13.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 3.3 MB/s eta 0:00:00
+Downloading typer-0.29.2-py3-none-any.whl (121 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Downloading websockets-17.4-cp312-cp312-win_amd64.whl (219 kB)
+Downloading xlsxwriter-3.3.4-py3-none-any.whl (192 kB)
+Downloading bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl (207 kB)
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Downloading importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Downloading pythonnet-3.2.1-cp311.cp312.cp313.cp314.cp315-none-any.whl (222 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading aiohttp-3.14.5-cp312-cp312-win_amd64.whl (506 kB)
+Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading clr_loader-0.3.1-py3-none-any.whl (55 kB)
+Downloading durationpy-0.11-py3-none-any.whl (4.1 kB)
+Downloading googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading narwhals-2.29.0-py3-none-any.whl (501 kB)
+Downloading oauthlib-4.0.1-py3-none-any.whl (161 kB)
+Downloading protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading regex-2026.11.19-cp312-cp312-win_amd64.whl (281 kB)
+Downloading rpds_py-2026.9.1-cp312-cp312-win_amd64.whl (222 kB)
+Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 1.8 MB/s eta 0:00:00
+Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading cffi-2.1.1-cp312-cp312-win_amd64.whl (185 kB)
+Downloading cloudpickle-3.1.3-py3-none-any.whl (22 kB)
+Downloading frozenlist-1.8.0-cp312-cp312-win_amd64.whl (44 kB)
+Downloading markupsafe-3.0.4-cp312-cp312-win_amd64.whl (14 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 1.9 MB/s eta 0:00:00
+Downloading multidict-7.2.1-cp312-cp312-win_amd64.whl (95 kB)
+Downloading propcache-0.5.4-cp312-cp312-win_amd64.whl (46 kB)
+Downloading yarl-1.25.1-cp312-cp312-win_amd64.whl (102 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Building wheels for collected packages: proxy_tools
+  Building wheel for proxy_tools (pyproject.toml) ... done
+  Created wheel for proxy_tools: filename=proxy_tools-0.1.0-py3-none-any.whl size=2944 sha256=cebb6f9fd7ed338152c9c3ae2245f99c1b340642b255ed56c91ad0328b6c9589
+  Stored in directory: c:\users\ben20\appdata\local\pip\cache\wheels\07\37\12\f3390260c831aa68c3835d6ec2e10d8da094b5fc0ac32feb14
+Successfully built proxy_tools
+Installing collected packages: pypika, proxy_tools, mpmath, flatbuffers, durationpy, bottle, XlsxWriter, websockets, websocket-client, urllib3, tzdata, typing-extensions, truststore, threadpoolctl, tenacity, tabulate, sympy, shellingham, setuptools, safetensors, rpds-py, regex, pyyaml, python-multipart, python-dotenv, pyproject_hooks, pyparsing, pygments, pycparser, pybase64, psutil, protobuf, propcache, pluggy, Pillow, packaging, overrides, orjson, oauthlib, numpy, networkx, narwhals, multidict, mmh3, mdurl, MarkupSafe, lxml, kiwisolver, iniconfig, importlib-resources, idna, httptools, hf-xet, h11, fsspec, frozenlist, fonttools, filelock, et-xmlfile, cycler, colorama, cloudpickle, click, charset-normalizer, certifi, bcrypt, attrs, annotated-types, annotated-doc, aiohappyeyeballs, yarl, uvicorn, typing-inspection, tqdm, scipy, requests, reportlab, referencing, rank-bm25, python-pptx, python-docx, python-dateutil, pytest, pydantic-core, opentelemetry-proto, opentelemetry-api, openpyxl, onnxruntime, markdown-it-py, joblib, jinja2, httpcore2, httpcore, grpcio, googleapis-common-protos, contourpy, cffi, build, anyio, aiosignal, watchfiles, torch, starlette, scikit-learn, rich, requests-oauthlib, pydantic, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, matplotlib, jsonschema-specifications, httpx2, httpx, clr_loader, aiohttp, typer, pythonnet, pydantic-settings, opentelemetry-sdk, jsonschema, huggingface_hub, fastapi, aiohttp-retry, tokenizers, pywebview, opentelemetry-exporter-otlp-common, kubernetes, transformers, opentelemetry-exporter-otlp-proto-grpc, sentence-transformers, chromadb, pymupdf4llm, pymupdf-layout, pymupdf
+ERROR: Operation cancelled by user
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [ok] Virtual environment exists
+  [..] Installing dependencies (first run only, ~5 min)...
+Collecting fastapi (from -r requirements.txt (line 1))
+  Using cached fastapi-0.165.0-py3-none-any.whl.metadata (27 kB)
+Requirement already satisfied: python-multipart in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from -r requirements.txt (line 3)) (0.0.34)
+Collecting pydantic (from -r requirements.txt (line 4))
+  Using cached pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Collecting chromadb (from -r requirements.txt (line 6))
+  Using cached chromadb-1.5.9-cp39-abi3-win_amd64.whl.metadata (5.1 kB)
+Collecting sentence-transformers (from -r requirements.txt (line 7))
+  Using cached sentence_transformers-6.3.0-py3-none-any.whl.metadata (20 kB)
+Collecting rank-bm25 (from -r requirements.txt (line 8))
+  Using cached rank_bm25-0.2.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pymupdf (from -r requirements.txt (line 10))
+  Using cached pymupdf-2.1-cp311-abi3-win_amd64.whl.metadata (26 kB)
+Collecting python-docx (from -r requirements.txt (line 11))
+  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting python-pptx (from -r requirements.txt (line 12))
+  Using cached python_pptx-1.0.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting openpyxl (from -r requirements.txt (line 13))
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting reportlab (from -r requirements.txt (line 15))
+  Using cached reportlab-5.1.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting markdown-it-py (from -r requirements.txt (line 16))
+  Using cached markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting huggingface_hub>=0.26 (from -r requirements.txt (line 17))
+  Using cached huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+Collecting matplotlib>=3.11.2 (from -r requirements.txt (line 18))
+  Using cached matplotlib-3.11.2-cp312-cp312-win_amd64.whl.metadata (80 kB)
+Collecting pywebview (from -r requirements.txt (line 20))
+  Using cached pywebview-6.2.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pytest (from -r requirements-dev.txt (line 2))
+  Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting httpx (from -r requirements-dev.txt (line 3))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting uvicorn[standard] (from -r requirements.txt (line 2))
+  Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting starlette>=1.6.0 (from fastapi->-r requirements.txt (line 1))
+  Using cached starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting anyio>=4.1.0 (from fastapi->-r requirements.txt (line 1))
+  Using cached anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: typing-extensions>=4.8.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from fastapi->-r requirements.txt (line 1)) (4.16.0)
+Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements.txt (line 1))
+  Using cached typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements.txt (line 1))
+  Using cached annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi->-r requirements.txt (line 1))
+  Using cached opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+Collecting click>=7.0 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting httptools>=0.8.0 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Using cached httptools-0.9.0-cp312-cp312-win_amd64.whl.metadata (3.7 kB)
+Requirement already satisfied: python-dotenv>=0.13 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from uvicorn[standard]->-r requirements.txt (line 2)) (1.2.4)
+Requirement already satisfied: pyyaml>=5.1 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from uvicorn[standard]->-r requirements.txt (line 2)) (6.0.4)
+Collecting watchfiles>=0.20 (from uvicorn[standard]->-r requirements.txt (line 2))
+  Using cached watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Requirement already satisfied: websockets>=13.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from uvicorn[standard]->-r requirements.txt (line 2)) (17.4)
+Collecting annotated-types>=0.6.0 (from pydantic->-r requirements.txt (line 4))
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.5 (from pydantic->-r requirements.txt (line 4))
+  Using cached pydantic_core-2.50.5-cp312-cp312-win_amd64.whl.metadata (6.7 kB)
+Collecting build>=1.0.3 (from chromadb->-r requirements.txt (line 6))
+  Using cached build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting pydantic-settings>=2.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: pybase64>=1.4.1 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (1.5.2)
+Requirement already satisfied: numpy>=1.22.5 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (2.5.5)
+Collecting onnxruntime>=1.14.1 (from chromadb->-r requirements.txt (line 6))
+  Using cached onnxruntime-1.32.0-cp312-cp312-win_amd64.whl.metadata (6.1 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting opentelemetry-sdk>=1.2.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting tokenizers>=0.13.2 (from chromadb->-r requirements.txt (line 6))
+  Using cached tokenizers-0.23.3-cp310-abi3-win_amd64.whl.metadata (10 kB)
+Requirement already satisfied: pypika>=0.48.9 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (0.51.1)
+Collecting tqdm>=4.65.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: overrides>=7.3.1 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (7.7.0)
+Collecting importlib-resources (from chromadb->-r requirements.txt (line 6))
+  Using cached importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting grpcio>=1.58.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached grpcio-1.85.3-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
+Collecting bcrypt>=4.0.1 (from chromadb->-r requirements.txt (line 6))
+  Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB)
+Collecting typer>=0.9.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached typer-0.29.2-py3-none-any.whl.metadata (16 kB)
+Collecting kubernetes>=28.1.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached kubernetes-37.0.3-py2.py3-none-any.whl.metadata (1.9 kB)
+Requirement already satisfied: tenacity>=8.2.3 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (9.2.1)
+Collecting mmh3>=4.0.1 (from chromadb->-r requirements.txt (line 6))
+  Using cached mmh3-5.3.1-cp312-cp312-win_amd64.whl.metadata (14 kB)
+Requirement already satisfied: orjson>=3.9.12 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from chromadb->-r requirements.txt (line 6)) (3.13.0)
+Collecting rich>=10.11.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting jsonschema>=4.19.0 (from chromadb->-r requirements.txt (line 6))
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting transformers<6.0.0,>=5.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Using cached transformers-5.24.0-py3-none-any.whl.metadata (31 kB)
+Collecting torch>=2.2 (from sentence-transformers->-r requirements.txt (line 7))
+  Using cached torch-2.15.0-cp312-cp312-win_amd64.whl.metadata (36 kB)
+Collecting scikit-learn>=1.1.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Using cached scikit_learn-1.9.1-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting scipy>=1.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Using cached scipy-1.18.1-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Requirement already satisfied: networkx in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pymupdf->-r requirements.txt (line 10)) (3.7)
+Collecting pymupdf-layout==2.1 (from pymupdf->-r requirements.txt (line 10))
+  Using cached pymupdf_layout-2.1-py3-none-any.whl.metadata (657 bytes)
+Requirement already satisfied: psutil in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pymupdf->-r requirements.txt (line 10)) (7.2.2)
+Requirement already satisfied: tabulate in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pymupdf->-r requirements.txt (line 10)) (0.10.0)
+Collecting pymupdf4llm==2.1 (from pymupdf->-r requirements.txt (line 10))
+  Using cached pymupdf4llm-2.1-py3-none-any.whl.metadata (648 bytes)
+Collecting lxml>=3.1.0 (from python-docx->-r requirements.txt (line 11))
+  Using cached lxml-6.1.3-cp312-cp312-win_amd64.whl.metadata (3.4 kB)
+Requirement already satisfied: Pillow>=3.3.2 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from python-pptx->-r requirements.txt (line 12)) (13.0.0)
+Requirement already satisfied: XlsxWriter>=0.5.7 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from python-pptx->-r requirements.txt (line 12)) (3.3.4)
+Collecting et-xmlfile (from openpyxl->-r requirements.txt (line 13))
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting charset-normalizer (from reportlab->-r requirements.txt (line 15))
+  Using cached charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl.metadata (47 kB)
+Collecting mdurl~=0.1 (from markdown-it-py->-r requirements.txt (line 16))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting filelock>=3.10.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Using cached filelock-4.3.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting fsspec>=2023.5.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Using cached fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Using cached hf_xet-1.8.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+Collecting httpx2<3,>=2.0.0 (from huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Using cached httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+Requirement already satisfied: packaging>=20.9 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from huggingface_hub>=0.26->-r requirements.txt (line 17)) (26.3)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Using cached contourpy-1.4.0-cp312-cp312-win_amd64.whl.metadata (3.8 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Using cached fonttools-4.68.0-cp312-cp312-win_amd64.whl.metadata (142 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Using cached kiwisolver-1.5.1-cp312-cp312-win_amd64.whl.metadata (5.2 kB)
+Requirement already satisfied: pyparsing>=3 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from matplotlib>=3.11.2->-r requirements.txt (line 18)) (3.3.3)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.11.2->-r requirements.txt (line 18))
+  Using cached python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pythonnet (from pywebview->-r requirements.txt (line 20))
+  Using cached pythonnet-3.2.1-cp311.cp312.cp313.cp314.cp315-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: proxy_tools in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pywebview->-r requirements.txt (line 20)) (0.1.0)
+Requirement already satisfied: bottle in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pywebview->-r requirements.txt (line 20)) (0.13.4)
+Collecting colorama>=0.4 (from pytest->-r requirements-dev.txt (line 2))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=2 (from pytest->-r requirements-dev.txt (line 2))
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: pluggy<2,>=1.6 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pytest->-r requirements-dev.txt (line 2)) (1.7.0)
+Requirement already satisfied: pygments>=2.15 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from pytest->-r requirements-dev.txt (line 2)) (2.21.0)
+Collecting certifi (from httpx->-r requirements-dev.txt (line 3))
+  Using cached certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->-r requirements-dev.txt (line 3))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx->-r requirements-dev.txt (line 3))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Requirement already satisfied: pyproject_hooks in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from build>=1.0.3->chromadb->-r requirements.txt (line 6)) (1.3.3)
+Collecting httpcore2==2.16.2 (from httpx2<3,>=2.0.0->huggingface_hub>=0.26->-r requirements.txt (line 17))
+  Using cached httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+Requirement already satisfied: truststore>=0.10 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from httpx2<3,>=2.0.0->huggingface_hub>=0.26->-r requirements.txt (line 17)) (0.10.5)
+Collecting attrs>=22.2.0 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6))
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: rpds-py>=0.25.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from jsonschema>=4.19.0->chromadb->-r requirements.txt (line 6)) (2026.9.1)
+Requirement already satisfied: websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6)) (1.9.2)
+Collecting requests (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting requests-oauthlib (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: oauthlib>=4.0.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6)) (4.0.1)
+Requirement already satisfied: urllib3<3.0.0,>=2.8.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6)) (2.8.0)
+Requirement already satisfied: durationpy>=0.11 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6)) (0.11)
+Collecting aiohttp<4.0.0,>=3.14.5 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached aiohttp-3.14.5-cp312-cp312-win_amd64.whl.metadata (8.5 kB)
+Collecting aiohttp-retry>=2.9.1 (from kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+Requirement already satisfied: flatbuffers in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from onnxruntime>=1.14.1->chromadb->-r requirements.txt (line 6)) (25.12.19)
+Requirement already satisfied: protobuf>=4.25.8 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from onnxruntime>=1.14.1->chromadb->-r requirements.txt (line 6)) (7.36.2)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Using cached googleapis_common_protos-1.76.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting opentelemetry-exporter-otlp-common==0.66b2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl.metadata (1.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk>=1.2.0->chromadb->-r requirements.txt (line 6))
+  Using cached opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: tzdata in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from python-dateutil>=2.7->matplotlib>=3.11.2->-r requirements.txt (line 18)) (2026.6)
+Collecting joblib>=1.4.0 (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Using cached joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Using cached narwhals-2.29.0-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: threadpoolctl>=3.5.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7)) (3.8.0)
+Requirement already satisfied: setuptools>=77.0.3 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7)) (84.2.1)
+Requirement already satisfied: sympy>=1.13.3 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7)) (1.14.0)
+Collecting jinja2 (from torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: regex>=2025.10.22 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7)) (2026.11.19)
+Requirement already satisfied: safetensors>=0.8.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7)) (0.8.0)
+Requirement already satisfied: shellingham>=1.3.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from typer>=0.9.0->chromadb->-r requirements.txt (line 6)) (1.5.4)
+Collecting clr_loader<0.4.0,>=0.3.1 (from pythonnet->pywebview->-r requirements.txt (line 20))
+  Using cached clr_loader-0.3.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached frozenlist-1.8.0-cp312-cp312-win_amd64.whl.metadata (21 kB)
+Collecting multidict<8.0,>=4.5 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached multidict-7.2.1-cp312-cp312-win_amd64.whl.metadata (6.3 kB)
+Requirement already satisfied: propcache>=0.2.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6)) (0.5.4)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.14.5->kubernetes>=28.1.0->chromadb->-r requirements.txt (line 6))
+  Using cached yarl-1.25.1-cp312-cp312-win_amd64.whl.metadata (115 kB)
+Collecting cffi>=1.17 (from clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements.txt (line 20))
+  Using cached cffi-2.1.1-cp312-cp312-win_amd64.whl.metadata (2.6 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.4.0->scikit-learn>=1.1.0->sentence-transformers->-r requirements.txt (line 7))
+  Using cached cloudpickle-3.1.3-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from sympy>=1.13.3->torch>=2.2->sentence-transformers->-r requirements.txt (line 7)) (1.3.0)
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=2.2->sentence-transformers->-r requirements.txt (line 7))
+  Using cached markupsafe-3.0.4-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Requirement already satisfied: pycparser in c:\users\ben20\documents\github\fortis-comp3010\.venv\lib\site-packages (from cffi>=1.17->clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements.txt (line 20)) (3.12)
+Using cached fastapi-0.165.0-py3-none-any.whl (159 kB)
+Using cached pydantic-2.14.4-py3-none-any.whl (494 kB)
+Using cached pydantic_core-2.50.5-cp312-cp312-win_amd64.whl (2.3 MB)
+Using cached chromadb-1.5.9-cp39-abi3-win_amd64.whl (23.5 MB)
+Using cached sentence_transformers-6.3.0-py3-none-any.whl (780 kB)
+Using cached rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+Using cached pymupdf-2.1-cp311-abi3-win_amd64.whl (63.0 MB)
+Using cached pymupdf_layout-2.1-py3-none-any.whl (1.0 kB)
+Using cached pymupdf4llm-2.1-py3-none-any.whl (1.0 kB)
+Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+Using cached python_pptx-1.0.2-py3-none-any.whl (472 kB)
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Using cached reportlab-5.1.0-py3-none-any.whl (2.0 MB)
+Using cached markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Using cached huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+Using cached matplotlib-3.11.2-cp312-cp312-win_amd64.whl (9.3 MB)
+Using cached pywebview-6.2.1-py3-none-any.whl (525 kB)
+Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached anyio-4.16.0-py3-none-any.whl (134 kB)
+Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB)
+Using cached build-1.6.1-py3-none-any.whl (31 kB)
+Using cached click-8.5.1-py3-none-any.whl (126 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached contourpy-1.4.0-cp312-cp312-win_amd64.whl (234 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached filelock-4.3.0-py3-none-any.whl (244 kB)
+Using cached fonttools-4.68.0-cp312-cp312-win_amd64.whl (2.5 MB)
+Using cached fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Using cached grpcio-1.85.3-cp312-cp312-win_amd64.whl (5.6 MB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached hf_xet-1.8.0-cp38-abi3-win_amd64.whl (3.9 MB)
+Using cached httptools-0.9.0-cp312-cp312-win_amd64.whl (92 kB)
+Using cached httpx2-2.16.2-py3-none-any.whl (97 kB)
+Using cached httpcore2-2.16.2-py3-none-any.whl (85 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached kiwisolver-1.5.1-cp312-cp312-win_amd64.whl (70 kB)
+Using cached kubernetes-37.0.3-py2.py3-none-any.whl (7.5 MB)
+Using cached certifi-2026.11.20-py3-none-any.whl (127 kB)
+Using cached lxml-6.1.3-cp312-cp312-win_amd64.whl (4.0 MB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached mmh3-5.3.1-cp312-cp312-win_amd64.whl (41 kB)
+Using cached onnxruntime-1.32.0-cp312-cp312-win_amd64.whl (16.7 MB)
+Using cached opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+Using cached opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl (19 kB)
+Using cached opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+Using cached opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl (15 kB)
+Using cached opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+Using cached opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+Using cached opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+Using cached pydantic_settings-2.16.3-py3-none-any.whl (82 kB)
+Using cached python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+Using cached scikit_learn-1.9.1-cp312-cp312-win_amd64.whl (8.3 MB)
+Using cached scipy-1.18.1-cp312-cp312-win_amd64.whl (36.7 MB)
+Using cached starlette-1.10.0-py3-none-any.whl (80 kB)
+Using cached tokenizers-0.23.3-cp310-abi3-win_amd64.whl (2.9 MB)
+Using cached torch-2.15.0-cp312-cp312-win_amd64.whl (126.7 MB)
+Using cached tqdm-4.70.1-py3-none-any.whl (80 kB)
+Using cached transformers-5.24.0-py3-none-any.whl (13.5 MB)
+Using cached typer-0.29.2-py3-none-any.whl (121 kB)
+Using cached typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Using cached watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Using cached charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl (207 kB)
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Using cached importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+Using cached pythonnet-3.2.1-cp311.cp312.cp313.cp314.cp315-none-any.whl (222 kB)
+Using cached aiohttp-3.14.5-cp312-cp312-win_amd64.whl (506 kB)
+Using cached aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached clr_loader-0.3.1-py3-none-any.whl (55 kB)
+Using cached googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+Using cached joblib-1.6.0-py3-none-any.whl (306 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached narwhals-2.29.0-py3-none-any.whl (501 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached cffi-2.1.1-cp312-cp312-win_amd64.whl (185 kB)
+Using cached cloudpickle-3.1.3-py3-none-any.whl (22 kB)
+Using cached frozenlist-1.8.0-cp312-cp312-win_amd64.whl (44 kB)
+Using cached markupsafe-3.0.4-cp312-cp312-win_amd64.whl (14 kB)
+Using cached multidict-7.2.1-cp312-cp312-win_amd64.whl (95 kB)
+Using cached yarl-1.25.1-cp312-cp312-win_amd64.whl (102 kB)
+Installing collected packages: typing-inspection, scipy, rank-bm25, python-dateutil, pydantic-core, opentelemetry-proto, opentelemetry-api, onnxruntime, narwhals, multidict, mmh3, mdurl, MarkupSafe, lxml, kiwisolver, iniconfig, importlib-resources, idna, httptools, hf-xet, h11, grpcio, googleapis-common-protos, fsspec, frozenlist, fonttools, filelock, et-xmlfile, cycler, contourpy, colorama, cloudpickle, click, charset-normalizer, cffi, certifi, bcrypt, attrs, annotated-types, annotated-doc, aiohappyeyeballs, yarl, uvicorn, tqdm, requests, reportlab, referencing, python-pptx, python-docx, pytest, pydantic, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, openpyxl, matplotlib, markdown-it-py, joblib, jinja2, httpcore2, httpcore, clr_loader, build, anyio, aiosignal, watchfiles, torch, starlette, scikit-learn, rich, requests-oauthlib, pythonnet, pydantic-settings, opentelemetry-sdk, jsonschema-specifications, httpx2, httpx, aiohttp, typer, pywebview, opentelemetry-exporter-otlp-common, jsonschema, huggingface_hub, fastapi, aiohttp-retry, tokenizers, opentelemetry-exporter-otlp-proto-grpc, kubernetes, transformers, chromadb, sentence-transformers, pymupdf4llm, pymupdf-layout, pymupdf
+Successfully installed MarkupSafe-3.0.4 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiohttp-retry-2.9.1 aiosignal-1.4.0 annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 bcrypt-5.0.0 build-1.6.1 certifi-2026.11.20 cffi-2.1.1 charset-normalizer-3.5.2 chromadb-1.5.9 click-8.5.1 cloudpickle-3.1.3 clr_loader-0.3.1 colorama-0.4.6 contourpy-1.4.0 cycler-0.12.1 et-xmlfile-2.0.0 fastapi-0.165.0 filelock-4.3.0 fonttools-4.68.0 frozenlist-1.8.0 fsspec-2026.9.0 googleapis-common-protos-1.76.0 grpcio-1.85.3 h11-0.16.0 hf-xet-1.8.0 httpcore-1.0.9 httpcore2-2.16.2 httptools-0.9.0 httpx-0.28.1 httpx2-2.16.2 huggingface_hub-2.4.0 idna-3.20 importlib-resources-7.1.0 iniconfig-2.3.1 jinja2-3.1.6 joblib-1.6.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kiwisolver-1.5.1 kubernetes-37.0.3 lxml-6.1.3 markdown-it-py-4.3.0 matplotlib-3.11.2 mdurl-0.1.2 mmh3-5.3.1 multidict-7.2.1 narwhals-2.29.0 onnxruntime-1.32.0 openpyxl-3.1.5 opentelemetry-api-1.45.2 opentelemetry-exporter-otlp-common-0.66b2 opentelemetry-exporter-otlp-proto-common-1.45.2 opentelemetry-exporter-otlp-proto-grpc-1.45.2 opentelemetry-proto-1.45.2 opentelemetry-sdk-1.45.2 opentelemetry-semantic-conventions-0.66b2 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.16.3 pymupdf-2.1 pymupdf-layout-2.1 pymupdf4llm-2.1 pytest-9.2.0 python-dateutil-4.0.0 python-docx-1.2.0 python-pptx-1.0.2 pythonnet-3.2.1 pywebview-6.2.1 rank-bm25-0.2.2 referencing-0.37.0 reportlab-5.1.0 requests-2.34.2 requests-oauthlib-2.0.0 rich-15.0.0 scikit-learn-1.9.1 scipy-1.18.1 sentence-transformers-6.3.0 starlette-1.10.0 tokenizers-0.23.3 torch-2.15.0 tqdm-4.70.1 transformers-5.24.0 typer-0.29.2 typing-inspection-0.4.5 uvicorn-0.54.0 watchfiles-1.3.0 yarl-1.25.1
+  [ok] Dependencies installed
+  [..] Installing the local AI engine (llama.cpp, ~200 MB)...
+python.exe : WARNING: Skipping llama_cpp_python as it is not installed.
+At C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\setup.ps1:76 char:9
++         & $venvPy -m pip uninstall --disable-pip-version-check --yes  ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Skippi... not installed.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [ok] Virtual environment exists
+  [ok] Dependencies present
+  [..] Installing the local AI engine (llama.cpp, ~200 MB)...
+python.exe : WARNING: Skipping llama_cpp_python as it is not installed.
+At C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\setup.ps1:77 char:9
++         & $venvPy -m pip uninstall --disable-pip-version-check --yes  ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Skippi... not installed.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [ok] Virtual environment exists
+  [ok] Dependencies present
+  [..] Installing the local AI engine (llama.cpp, ~200 MB)...
+python.exe : WARNING: Skipping llama_cpp_python as it is not installed.
+At C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\setup.ps1:78 char:9
++         & $venvPy -m pip uninstall --disable-pip-version-check --yes  ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Skippi... not installed.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [ok] Virtual environment exists
+  [ok] Dependencies present
+  [..] Installing the local AI engine (llama.cpp, ~200 MB)...
+WARNING: Skipping llama_cpp_python as it is not installed.
+       Trying the prebuilt CPU wheel (llama.cpp CPU index)...
+  [ok] Engine installed (CPU)
+  [..] Running offline sanity tests...
+    return self.router.on_event(event_type)  # ty: ignore[deprecated]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED desktop/tests/test_chat_history.py::test_report_turns_are_persisted_too
+FAILED desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[docx-.docx-<lambda>]
+FAILED desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[pptx-.pptx-<lambda>]
+FAILED desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[pdf-.pdf-<lambda>]
+FAILED desktop/tests/test_chat_report_export.py::test_stream_report_request_format_selection
+FAILED desktop/tests/test_chat_report_export.py::test_chat_report_request_writes_file
+FAILED desktop/tests/test_chat_report_export.py::test_report_slash_command_generates_and_downloads
+FAILED desktop/tests/test_chat_report_export.py::test_stream_report_without_documents_is_friendly_error
+FAILED desktop/tests/test_integration.py::test_report_generation_invalid_format
+FAILED desktop/tests/test_integration.py::test_report_generation_engagement_not_found
+10 failed, 229 passed, 2 warnings in 36.83s
+  [X] Self-test failed - see output above
+  Press Enter to exit:
+
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> ^C
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> ^C
+PS C:\Users\ben20\Documents\GitHub\Fortis-Comp3010> powershell -ExecutionPolicy Bypass -File setup.ps1
+
+  Fortis - Cybersecurity Advisor : setup
+  ----------------------------------------
+  [ok] Python 3.12.5
+  [ok] Virtual environment exists
+  [ok] Dependencies present
+  [ok] AI engine present
+  [..] Running offline sanity tests...
+  [..] Running offline sanity tests...
+================================================= test session starts =================================================
+platform win32 -- Python 3.12.5, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ben20\Documents\GitHub\Fortis-Comp3010
+plugins: anyio-4.16.0
+collected 239 items
+
+desktop/tests/test_charts_tables.py::test_severity_counts_all_keys_present PASSED                                [  0%]
+desktop/tests/test_charts_tables.py::test_framework_counts_correct PASSED                                        [  0%]
+desktop/tests/test_charts_tables.py::test_framework_counts_excludes_none PASSED                                  [  1%]
+desktop/tests/test_charts_tables.py::test_render_severity_chart_writes_png PASSED                                [  1%]
+desktop/tests/test_charts_tables.py::test_render_framework_chart_writes_png PASSED                               [  2%]
+desktop/tests/test_charts_tables.py::test_render_framework_chart_returns_none_for_zero_frameworks PASSED         [  2%]
+desktop/tests/test_charts_tables.py::test_render_docx_with_diagram PASSED                                        [  2%]
+desktop/tests/test_charts_tables.py::test_render_docx_zero_findings PASSED                                       [  3%]
+desktop/tests/test_chat_history.py::test_chat_turn_is_persisted_and_restorable PASSED                            [  3%]
+desktop/tests/test_chat_history.py::test_stream_turn_is_persisted PASSED                                         [  4%]
+desktop/tests/test_chat_history.py::test_history_is_scoped_per_engagement PASSED                                 [  4%]
+desktop/tests/test_chat_history.py::test_report_turns_are_persisted_too PASSED                                   [  5%]
+desktop/tests/test_chat_history.py::test_history_capped_at_newest_messages PASSED                                [  5%]
+desktop/tests/test_chat_history.py::test_history_limit_param PASSED                                              [  5%]
+desktop/tests/test_chat_history.py::test_history_order_is_oldest_first PASSED                                    [  6%]
+desktop/tests/test_chat_history.py::test_unicode_and_surrogates_round_trip PASSED                                [  6%]
+desktop/tests/test_chat_history.py::test_clear_history_requires_confirm PASSED                                   [  7%]
+desktop/tests/test_chat_history.py::test_clear_then_chat_again PASSED                                            [  7%]
+desktop/tests/test_chat_history.py::test_deleting_engagement_removes_history PASSED                              [  7%]
+desktop/tests/test_chat_history.py::test_history_of_unknown_engagement_404 PASSED                                [  8%]
+desktop/tests/test_chat_history.py::test_history_of_deleted_engagement_404 PASSED                                [  8%]
+desktop/tests/test_chat_history.py::test_invalid_limit_is_clamped PASSED                                         [  9%]
+desktop/tests/test_chat_history.py::test_llm_context_window_unchanged_by_persistence PASSED                      [  9%]
+desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[docx-.docx-<lambda>] PASSED [ 10%]
+desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[pptx-.pptx-<lambda>] PASSED [ 10%]
+desktop/tests/test_chat_report_export.py::test_stream_report_request_writes_file_to_report_dir[pdf-.pdf-<lambda>] PASSED [ 10%]
+desktop/tests/test_chat_report_export.py::test_stream_report_request_format_selection PASSED                     [ 11%]
+desktop/tests/test_chat_report_export.py::test_stream_report_placeholder_warning_in_stub_mode PASSED             [ 11%]
+desktop/tests/test_chat_report_export.py::test_stream_summary_question_is_chat_not_report PASSED                 [ 12%]
+desktop/tests/test_chat_report_export.py::test_chat_report_request_writes_file PASSED                            [ 12%]
+desktop/tests/test_chat_report_export.py::test_report_slash_command_generates_and_downloads PASSED               [ 12%]
+desktop/tests/test_chat_report_export.py::test_stream_report_without_documents_is_friendly_error PASSED          [ 13%]
+desktop/tests/test_chat_report_export.py::test_stream_report_placeholder_gate_without_allow_stub PASSED          [ 13%]
+desktop/tests/test_chat_report_export.py::test_chat_report_engagement_not_found_404 PASSED                       [ 14%]
+desktop/tests/test_chat_report_export.py::test_invalid_report_format_via_chat_returns_400 PASSED                 [ 14%]
+desktop/tests/test_chat_report_export.py::test_detect_report_request_matrix PASSED                               [ 15%]
+desktop/tests/test_hardware_offload.py::test_free_vram_gb_returns_zero_without_nvidia PASSED                     [ 15%]
+desktop/tests/test_hardware_offload.py::test_free_vram_gb_parses_nvidia_smi_fallback PASSED                      [ 15%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_explicit_override_wins PASSED                       [ 16%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_no_cuda_is_zero PASSED                              [ 16%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_full_when_vram_covers_model_and_kv PASSED           [ 17%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_fractional_when_vram_partial PASSED                 [ 17%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_fraction_clamped_to_95_percent PASSED               [ 17%]
+desktop/tests/test_hardware_offload.py::test_auto_gpu_layers_kv_estimate_scales_with_n_ctx PASSED                [ 18%]
+desktop/tests/test_hardware_offload.py::test_oom_ladder_decreases_to_cpu PASSED                                  [ 18%]
+desktop/tests/test_hardware_offload.py::test_load_sync_ladder_retries_then_succeeds PASSED                       [ 19%]
+desktop/tests/test_hardware_offload.py::test_load_sync_ladder_ends_cpu_when_all_gpu_attempts_fail PASSED         [ 19%]
+desktop/tests/test_hardware_offload.py::test_load_sync_single_attempt_when_cpu_only PASSED                       [ 20%]
+desktop/tests/test_hardware_offload.py::test_load_sync_cpu_failure_is_single_attempt_via_ladder PASSED           [ 20%]
+desktop/tests/test_hardware_offload.py::test_load_sync_reuses_known_good_offload_level PASSED                    [ 20%]
+desktop/tests/test_hardware_offload.py::test_load_sync_passes_threads_and_batch PASSED                           [ 21%]
+desktop/tests/test_hardware_offload.py::test_physical_core_estimate_honors_explicit_threads PASSED               [ 21%]
+desktop/tests/test_hardware_offload.py::test_physical_core_estimate_halves_high_logical_counts PASSED            [ 22%]
+desktop/tests/test_hardware_offload.py::test_physical_core_estimate_uses_logical_when_small PASSED               [ 22%]
+desktop/tests/test_hardware_offload.py::test_physical_core_estimate_minimum_one PASSED                           [ 23%]
+desktop/tests/test_hardware_offload.py::test_load_sync_auto_threads_uses_hardware_estimate PASSED                [ 23%]
+desktop/tests/test_hardware_offload.py::test_hardware_status_unknown_before_first_load PASSED                    [ 23%]
+desktop/tests/test_hardware_offload.py::test_hardware_status_offload_levels PASSED                               [ 24%]
+desktop/tests/test_hardware_offload.py::test_hardware_status_reports_cpu_when_cuda_load_collapsed PASSED         [ 24%]
+desktop/tests/test_hardware_offload.py::test_backend_wheel_variants PASSED                                       [ 25%]
+desktop/tests/test_hardware_offload.py::test_model_status_works_without_llama_cpp PASSED                         [ 25%]
+desktop/tests/test_hardware_offload.py::test_model_status_endpoint_exposes_hardware_fields PASSED                [ 25%]
+desktop/tests/test_integration.py::test_health PASSED                                                            [ 26%]
+desktop/tests/test_integration.py::test_create_engagement_has_readable_slug PASSED                               [ 26%]
+desktop/tests/test_integration.py::test_create_engagement_idempotent PASSED                                      [ 27%]
+desktop/tests/test_integration.py::test_active_engagement_persists_per_user PASSED                               [ 27%]
+desktop/tests/test_integration.py::test_activate_nonexistent_engagement_404s PASSED                              [ 28%]
+desktop/tests/test_integration.py::test_upload_requires_valid_engagement PASSED                                  [ 28%]
+desktop/tests/test_integration.py::test_upload_and_list_files PASSED                                             [ 28%]
+desktop/tests/test_integration.py::test_chat_requires_valid_engagement PASSED                                    [ 29%]
+desktop/tests/test_integration.py::test_chat_returns_stub_reply PASSED                                           [ 29%]
+desktop/tests/test_integration.py::test_report_generation_flat_path[docx-<lambda>] PASSED                        [ 30%]
+desktop/tests/test_integration.py::test_report_generation_flat_path[pptx-<lambda>] PASSED                        [ 30%]
+desktop/tests/test_integration.py::test_report_generation_flat_path[pdf-<lambda>] PASSED                         [ 30%]
+desktop/tests/test_integration.py::test_report_generation_requires_uploaded_documents PASSED                     [ 31%]
+desktop/tests/test_integration.py::test_report_generation_triggers_map_reduce_for_large_doc PASSED               [ 31%]
+desktop/tests/test_integration.py::test_api_command_unknown_command PASSED                                       [ 32%]
+desktop/tests/test_integration.py::test_api_command_use_empty_id PASSED                                          [ 32%]
+desktop/tests/test_integration.py::test_api_command_use_nonexistent_id PASSED                                    [ 33%]
+desktop/tests/test_integration.py::test_api_command_new_engagement_missing_separator PASSED                      [ 33%]
+desktop/tests/test_integration.py::test_api_command_new_engagement_empty_parts PASSED                            [ 33%]
+desktop/tests/test_integration.py::test_api_command_close_engagement_no_active PASSED                            [ 34%]
+desktop/tests/test_integration.py::test_update_engagement_status_to_closed PASSED                                [ 34%]
+desktop/tests/test_integration.py::test_update_engagement_status_invalid_value PASSED                            [ 35%]
+desktop/tests/test_integration.py::test_delete_engagement PASSED                                                 [ 35%]
+desktop/tests/test_integration.py::test_clear_active_engagement PASSED                                           [ 35%]
+desktop/tests/test_integration.py::test_upload_file_too_large PASSED                                             [ 36%]
+desktop/tests/test_integration.py::test_upload_empty_text_file PASSED                                            [ 36%]
+desktop/tests/test_integration.py::test_upload_whitespace_only_file PASSED                                       [ 37%]
+desktop/tests/test_integration.py::test_chat_stream_requires_valid_engagement PASSED                             [ 37%]
+desktop/tests/test_integration.py::test_chat_stream_returns_text_plain PASSED                                    [ 38%]
+desktop/tests/test_integration.py::test_report_generation_invalid_format PASSED                                  [ 38%]
+desktop/tests/test_integration.py::test_report_generation_engagement_not_found PASSED                            [ 38%]
+desktop/tests/test_integration.py::test_report_download_not_found PASSED                                         [ 39%]
+desktop/tests/test_integration.py::test_report_with_zero_findings_renders PASSED                                 [ 39%]
+desktop/tests/test_integration.py::test_stub_backend_chat_stream_yields_tokens PASSED                            [ 40%]
+desktop/tests/test_integration.py::test_hardware_tier_suggestion_high_vram PASSED                                [ 40%]
+desktop/tests/test_integration.py::test_hardware_tier_suggestion_4b_vram PASSED                                  [ 41%]
+desktop/tests/test_integration.py::test_hardware_tier_suggestion_4b_ram PASSED                                   [ 41%]
+desktop/tests/test_integration.py::test_hardware_tier_suggestion_2b PASSED                                       [ 41%]
+desktop/tests/test_integration.py::test_hardware_tier_suggestion_08b PASSED                                      [ 42%]
+desktop/tests/test_llama_engine_chat.py::test_default_plain_chat_uses_2048 PASSED                                [ 42%]
+desktop/tests/test_llama_engine_chat.py::test_default_json_mode_uses_3072 PASSED                                 [ 43%]
+desktop/tests/test_llama_engine_chat.py::test_explicit_max_tokens_is_passed_through PASSED                       [ 43%]
+desktop/tests/test_llama_engine_chat.py::test_explicit_max_tokens_zero_is_respected_not_defaulted PASSED         [ 43%]
+desktop/tests/test_llama_engine_chat.py::test_json_mode_content_is_extracted PASSED                              [ 44%]
+desktop/tests/test_llama_engine_chat.py::test_reasoning_fences_are_stripped PASSED                               [ 44%]
+desktop/tests/test_rag_upgrade.py::test_tokenize_lowercases_and_splits_on_non_alphanumerics PASSED               [ 45%]
+desktop/tests/test_rag_upgrade.py::test_mark_dirty_clears_hits_after_clear_engagement PASSED                     [ 45%]
+desktop/tests/test_rag_upgrade.py::test_hybrid_query_isolated_per_engagement PASSED                              [ 46%]
+desktop/tests/test_rag_upgrade.py::test_hybrid_rescues_exact_identifier_doc PASSED                               [ 46%]
+desktop/tests/test_rag_upgrade.py::test_basic_level_uses_dense_path_only PASSED                                  [ 46%]
+desktop/tests/test_rag_upgrade.py::test_standard_level_calls_hybrid_and_rerank PASSED                            [ 47%]
+desktop/tests/test_rag_upgrade.py::test_heuristic_condense_without_history_returns_message PASSED                [ 47%]
+desktop/tests/test_rag_upgrade.py::test_heuristic_condense_prepends_last_user_turn PASSED                        [ 48%]
+desktop/tests/test_rag_upgrade.py::test_heuristic_condense_with_assistant_only_history_returns_message PASSED    [ 48%]
+desktop/tests/test_rag_upgrade.py::test_condense_query_standard_matches_heuristic_without_llm PASSED             [ 48%]
+desktop/tests/test_rag_upgrade.py::test_build_chat_messages_retrieval_query_drives_retrieval PASSED              [ 49%]
+desktop/tests/test_rag_upgrade.py::test_build_chat_messages_defaults_retrieval_query_to_message PASSED           [ 49%]
+desktop/tests/test_rag_upgrade.py::test_rerank_falls_back_to_input_order_when_unavailable PASSED                 [ 50%]
+desktop/tests/test_rag_upgrade.py::test_chunk_text_enriched_plain_header PASSED                                  [ 50%]
+desktop/tests/test_rag_upgrade.py::test_chunk_text_enriched_multipage_headers PASSED                             [ 51%]
+desktop/tests/test_rag_upgrade.py::test_chunk_text_enriched_sanitizes_hostile_filename PASSED                    [ 51%]
+desktop/tests/test_rag_upgrade.py::test_chunk_text_enriched_caps_filename_at_120_chars PASSED                    [ 51%]
+desktop/tests/test_rag_upgrade.py::test_chunk_text_enriched_handles_hostile_sheet_input_fast PASSED              [ 52%]
+desktop/tests/test_report_progress.py::test_progress_snapshot_idle_shape PASSED                                  [ 52%]
+desktop/tests/test_report_progress.py::test_progress_lifecycle_and_stage_transitions PASSED                      [ 53%]
+desktop/tests/test_report_progress.py::test_progress_fail_marks_inactive PASSED                                  [ 53%]
+desktop/tests/test_report_progress.py::test_progress_endpoint_shape PASSED                                       [ 53%]
+desktop/tests/test_report_progress.py::test_stub_report_blocked_without_allow_stub PASSED                        [ 54%]
+desktop/tests/test_report_progress.py::test_stub_report_allowed_with_allow_stub PASSED                           [ 54%]
+desktop/tests/test_report_progress.py::test_gate_skipped_when_backend_not_stub PASSED                            [ 55%]
+desktop/tests/test_report_progress.py::test_map_reduce_progress_tracks_batches PASSED                            [ 55%]
+desktop/tests/test_report_progress.py::test_flat_report_progress_single_step PASSED                              [ 56%]
+desktop/tests/test_report_progress.py::test_slow_backend_doubles_map_batch_tokens PASSED                         [ 56%]
+desktop/tests/test_report_progress.py::test_map_reduce_plan_uses_effective_batch_size PASSED                     [ 56%]
+desktop/tests/test_report_progress.py::test_report_failure_marks_progress_failed PASSED                          [ 57%]
+desktop/tests/test_rerank_retry.py::test_bounded_retry_short_circuits_after_two_failures PASSED                  [ 57%]
+desktop/tests/test_rerank_retry.py::test_cumulative_counter_survives_successes PASSED                            [ 58%]
+desktop/tests/test_rerank_retry.py::test_reset_retry_state_clears_failure_counter PASSED                         [ 58%]
+desktop/tests/test_rerank_retry.py::test_rerank_unavailable_never_touches_stub PASSED                            [ 58%]
+desktop/tests/test_retrieval_device.py::test_embedding_cuda_selected_when_available PASSED                       [ 59%]
+desktop/tests/test_retrieval_device.py::test_embedding_cuda_encode_failure_falls_back_to_cpu_and_remembers PASSED [ 59%]
+desktop/tests/test_retrieval_device.py::test_embedding_no_gpu_stays_cpu PASSED                                   [ 60%]
+desktop/tests/test_retrieval_device.py::test_embedding_cuda_probe_failure_stays_cpu PASSED                       [ 60%]
+desktop/tests/test_retrieval_device.py::test_embedding_cpu_load_failure_propagates PASSED                        [ 61%]
+desktop/tests/test_retrieval_device.py::test_rerank_cuda_selected_when_available PASSED                          [ 61%]
+desktop/tests/test_retrieval_device.py::test_rerank_cuda_load_failure_falls_back_to_cpu_and_remembers PASSED     [ 61%]
+desktop/tests/test_retrieval_device.py::test_rerank_cuda_predict_failure_demotes_to_cpu PASSED                   [ 62%]
+desktop/tests/test_retrieval_device.py::test_rerank_no_gpu_stays_cpu PASSED                                      [ 62%]
+desktop/tests/test_stress.py::test_one_mb_document_ingestion_and_retrieval PASSED                                [ 63%]
+desktop/tests/test_stress.py::test_one_mb_document_report_generation PASSED                                      [ 63%]
+desktop/tests/test_stress.py::test_fifty_engagement_creations_in_loop PASSED                                     [ 64%]
+desktop/tests/test_stress.py::test_fifty_idempotent_creation_calls_return_same_id PASSED                         [ 64%]
+desktop/tests/test_stress.py::test_thirty_rapid_chat_turns_stay_correct PASSED                                   [ 64%]
+desktop/tests/test_stress.py::test_thirty_chat_turns_across_engagements_keep_scoping PASSED                      [ 65%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[emoji] PASSED                             [ 65%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[cjk] PASSED                               [ 66%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[japanese] PASSED                          [ 66%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[rtl-arabic] PASSED                        [ 66%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[control-chars] PASSED                     [ 67%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[emoji-flood] PASSED                       [ 67%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[100k-single-line] PASSED                  [ 68%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[cjk-flood] PASSED                         [ 68%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[null-flood] PASSED                        [ 69%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[zero-width-bom] PASSED                    [ 69%]
+desktop/tests/test_stress.py::test_adversarial_chat_input_does_not_500[mixed-scripts] PASSED                     [ 69%]
+desktop/tests/test_stress.py::test_json_escaped_lone_surrogate_message_does_not_500 PASSED                       [ 70%]
+desktop/tests/test_stress.py::test_json_escaped_lone_surrogate_in_engagement_creation PASSED                     [ 70%]
+desktop/tests/test_stress.py::test_json_escaped_lone_surrogate_in_upload_filename PASSED                         [ 71%]
+desktop/tests/test_stress.py::test_adversarial_chat_stream_does_not_500 PASSED                                   [ 71%]
+desktop/tests/test_stress.py::test_concurrent_uploads_four_threads_five_each PASSED                              [ 71%]
+desktop/tests/test_stress.py::test_concurrent_chat_and_uploads_mixed PASSED                                      [ 72%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[draw a diagram of the network-diagram] PASSED [ 72%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[show the topology-diagram] PASSED        [ 73%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[flow chart of the attack path-diagram] PASSED [ 73%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[visualize the architecture-diagram] PASSED [ 74%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[compare findings in a table-table] PASSED [ 74%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[give me a matrix of hosts vs vulnerabilities-table] PASSED [ 74%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[bar chart of severities-table] PASSED    [ 75%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[what is XSS-None] PASSED                 [ 75%]
+desktop/tests/test_structured.py::test_detect_structured_output_request[summarize the report-None] PASSED        [ 76%]
+desktop/tests/test_structured.py::test_is_valid_mermaid_fixtures[valid_flowchart_td.mmd-True] PASSED             [ 76%]
+desktop/tests/test_structured.py::test_is_valid_mermaid_fixtures[valid_flowchart_lr.mmd-True] PASSED             [ 76%]
+desktop/tests/test_structured.py::test_is_valid_mermaid_fixtures[valid_sequence.mmd-True] PASSED                 [ 77%]
+desktop/tests/test_structured.py::test_is_valid_mermaid_fixtures[invalid_shape_syntax.mmd-False] PASSED          [ 77%]
+desktop/tests/test_structured.py::test_is_valid_mermaid_fixtures[invalid_unbalanced.mmd-False] PASSED            [ 78%]
+desktop/tests/test_structured.py::test_reply_has_valid_diagram_with_fences PASSED                                [ 78%]
+desktop/tests/test_structured.py::test_extract_mermaid_blocks PASSED                                             [ 79%]
+desktop/tests/test_structured.py::test_is_valid_gfm_table_fixtures[valid_table.md-True] PASSED                   [ 79%]
+desktop/tests/test_structured.py::test_is_valid_gfm_table_fixtures[invalid_table.md-False] PASSED                [ 79%]
+desktop/tests/test_structured.py::test_format_instructions_diagram_mentions_types PASSED                         [ 80%]
+desktop/tests/test_structured.py::test_format_instructions_table_mentions_separator PASSED                       [ 80%]
+desktop/tests/test_structured.py::test_repair_instructions_diagram_mentions_constraints PASSED                   [ 81%]
+desktop/tests/test_structured.py::test_repair_instructions_table_mentions_format PASSED                          [ 81%]
+desktop/tests/test_structured.py::test_run_structured_turn_retries_on_bad_mermaid PASSED                         [ 82%]
+desktop/tests/test_structured.py::test_run_structured_turn_both_attempts_bad PASSED                              [ 82%]
+desktop/tests/test_structured.py::test_orchestrator_structured_intent_wiring PASSED                              [ 82%]
+desktop/tests/test_structured.py::test_orchestrator_report_intent_takes_priority PASSED                          [ 83%]
+desktop/tests/test_structured.py::test_orchestrator_plain_message_takes_normal_chat PASSED                       [ 83%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_has_all_nine_ids PASSED                                    [ 84%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_entry_keys PASSED                                          [ 84%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_valid_quants PASSED                                        [ 84%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_valid_roles PASSED                                         [ 85%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_q3_quant_for_high_tiers PASSED                             [ 85%]
+desktop/tests/test_tiers_roles.py::test_tiers_catalog_n_ctx_values PASSED                                        [ 86%]
+desktop/tests/test_tiers_roles.py::test_suggest_tiers_matrix[32.0-8.0-True-expected0] PASSED                     [ 86%]
+desktop/tests/test_tiers_roles.py::test_suggest_tiers_matrix[16.0-4.0-True-expected1] PASSED                     [ 87%]
+desktop/tests/test_tiers_roles.py::test_suggest_tiers_matrix[16.0-2.0-True-expected2] PASSED                     [ 87%]
+desktop/tests/test_tiers_roles.py::test_suggest_tiers_matrix[8.0-0.0-False-expected3] PASSED                     [ 87%]
+desktop/tests/test_tiers_roles.py::test_suggest_tiers_matrix[4.0-0.0-False-expected4] PASSED                     [ 88%]
+desktop/tests/test_tiers_roles.py::test_suggest_tier_wrapper_equals_chat_role PASSED                             [ 88%]
+desktop/tests/test_tiers_roles.py::test_list_local_models_recursive PASSED                                       [ 89%]
+desktop/tests/test_tiers_roles.py::test_tier_status_includes_extended_keys PASSED                                [ 89%]
+desktop/tests/test_tiers_roles.py::test_current_tier_and_tier_status_with_fake_files PASSED                      [ 89%]
+desktop/tests/test_tiers_roles.py::test_tier_status_matches_unsloth_filenames PASSED                             [ 90%]
+desktop/tests/test_tiers_roles.py::test_pick_gguf_file_selects_q3_when_requested PASSED                          [ 90%]
+desktop/tests/test_tiers_roles.py::test_pick_gguf_file_default_selects_q4 PASSED                                 [ 91%]
+desktop/tests/test_tiers_roles.py::test_pick_gguf_file_empty_list_raises_runtime_error PASSED                    [ 91%]
+desktop/tests/test_tiers_roles.py::test_role_presets_exact_keys PASSED                                           [ 92%]
+desktop/tests/test_tiers_roles.py::test_grc_preset_mentions_control_ids PASSED                                   [ 92%]
+desktop/tests/test_tiers_roles.py::test_code_preset_mentions_cwe PASSED                                          [ 92%]
+desktop/tests/test_tiers_roles.py::test_cti_preset_mentions_attack PASSED                                        [ 93%]
+desktop/tests/test_tiers_roles.py::test_build_chat_messages_with_grc_role_injects_preset PASSED                  [ 93%]
+desktop/tests/test_tiers_roles.py::test_build_chat_messages_with_none_role_uses_system_persona_only PASSED       [ 94%]
+desktop/tests/test_tiers_roles.py::test_build_chat_messages_with_bogus_role_uses_system_persona_only PASSED      [ 94%]
+desktop/tests/test_tiers_roles.py::test_chat_endpoint_role_reaches_build_chat_messages PASSED                    [ 94%]
+desktop/tests/test_tiers_roles.py::test_chat_endpoint_unknown_role_coerced PASSED                                [ 95%]
+desktop/tests/test_tiers_roles.py::test_chat_stream_endpoint_role_reaches_build_chat_messages PASSED             [ 95%]
+desktop/tests/test_tiers_roles.py::test_orchestrator_chat_turn_role_passes_to_chat PASSED                        [ 96%]
+desktop/tests/test_tiers_roles.py::test_model_select_sets_n_ctx_from_tier PASSED                                 [ 96%]
+desktop/tests/test_ui_smoke.py::test_core_element_ids_present PASSED                                             [ 97%]
+desktop/tests/test_ui_smoke.py::test_report_progress_elements_present PASSED                                     [ 97%]
+desktop/tests/test_ui_smoke.py::test_report_progress_poll_contract PASSED                                        [ 97%]
+desktop/tests/test_ui_smoke.py::test_report_progress_poll_interval_is_800ms PASSED                               [ 98%]
+desktop/tests/test_ui_smoke.py::test_report_progress_hides_after_1500ms PASSED                                   [ 98%]
+desktop/tests/test_ui_smoke.py::test_hardware_status_line_present PASSED                                         [ 99%]
+desktop/tests/test_ui_smoke.py::test_cpu_mode_progress_hint PASSED                                               [ 99%]
+desktop/tests/test_ui_smoke.py::test_no_unsafe_model_output_insertion PASSED                                     [100%]
+
+================================================== warnings summary ===================================================
+core\main.py:29
+  C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\core\main.py:29: DeprecationWarning:
+          on_event is deprecated, use lifespan event handlers instead.
+
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+    @app.on_event("startup")
+
+.venv\Lib\site-packages\fastapi\applications.py:5039
+  C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\.venv\Lib\site-packages\fastapi\applications.py:5039: DeprecationWarning:
+          on_event is deprecated, use lifespan event handlers instead.
+
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+    return self.router.on_event(event_type)  # ty: ignore[deprecated]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================================== 239 passed, 2 warnings in 39.71s ===========================================
+  [ok] Self-tests passed
+
+  Setup complete. Starting Fortis...
+  (First chat message downloads the AI model - about 3.4 GB, one time.)
+
+INFO:core.main:Initializing client/engagement database
+INFO:core.main:Seeding framework reference corpus: ['NIST_CSF', 'OWASP_TOP10', 'CIS_CONTROLS', 'MITRE_ATTACK', 'CIS_BENCHMARKS', 'ISO_27001', 'PCI_DSS', 'SOC_2', 'GDPR', 'HIPAA', 'NIST_800-53', 'CWE_TOP25']
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+modules.json: 100%|████████████████████████████████████████████████████████████████████| 349/349 [00:00<00:00, 350kB/s]
+C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\ben20\.cache\huggingface\hub\models--BAAI--bge-small-en-v1.5. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+config_sentence_transformers.json: 100%|███████████████████████████████████████████████| 124/124 [00:00<00:00, 124kB/s]
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+README.md: 100%|██████████████████████████████████████████████████████████████████| 94.8k/94.8k [00:00<00:00, 47.5MB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+sentence_bert_config.json: 100%|████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 52.0kB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/adapter_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+config.json: 100%|████████████████████████████████████████████████████████████████████████████| 743/743 [00:00<?, ?B/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/model.safetensors "HTTP/1.1 302 Found"
+C:\Users\ben20\Documents\GitHub\Fortis-Comp3010\.venv\Lib\site-packages\huggingface_hub\file_download.py:149: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\ben20\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/xet-read-token/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a "HTTP/1.1 200 OK"
+model.safetensors: downloading bytes: █████████████████████████████████████████████████████████████| 86.7MB, 5.75MB/s
+model.safetensors: reconstructing file: 100%|█████████████████████████████████████████████|  133MB /  133MB, 11.2MB/s
+Loading weights: 100%|█████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 1072.54it/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/processor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+tokenizer_config.json: 100%|██████████████████████████████████████████████████████████████████| 366/366 [00:00<?, ?B/s]
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+vocab.txt: 100%|████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 7.06MB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer.json=&etag=%22688882a79f44442ddc1f60d70334a7ff5df0fb47%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer.json=&etag=%22688882a79f44442ddc1f60d70334a7ff5df0fb47%22 "HTTP/1.1 200 OK"
+tokenizer.json: 100%|███████████████████████████████████████████████████████████████| 711k/711k [00:00<00:00, 16.7MB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/added_tokens.json "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fspecial_tokens_map.json=&etag=%22a8b3208c2884c4efb86e49300fdd3dc877220cdf%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fspecial_tokens_map.json=&etag=%22a8b3208c2884c4efb86e49300fdd3dc877220cdf%22 "HTTP/1.1 200 OK"
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████████| 125/125 [00:00<00:00, 124kB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/chat_template.jinja "HTTP/1.1 404 Not Found"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+config.json: 100%|█████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 190kB/s]
+INFO:httpx2:HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
