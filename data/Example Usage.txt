@@ -1,0 +1,4 @@
+To test for validation, measure accuracy, hallucinations and response latency. We are looking to train Fortis to identify:
+
+Ask questions such as What is T1059. What are the indicators for T1059.
+

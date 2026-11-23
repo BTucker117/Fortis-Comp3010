@@ -1,0 +1,569 @@
+Lets start this conversation off with some context. I have this project I am working on for my university:
+
+Coursework 2: FORTIS Enhancement Project
+Task
+Modern Security Operations Centres increasingly use Artificial Intelligence, Retrieval-Augmented
+Generation (RAG), AI agents, security copilots, threat-intelligence pipelines and security
+automation. In this coursework, students work with an existing AI-powered cybersecurity adviser
+called Fortis.
+Repository: https://github.com/kenobicjj/Fortis (fork from this repo, don’t use the original
+syberseeker branch. You may refer to the updates there though.)
+A copy of the repository and supporting materials will be provided to students. The supplied
+implementation is intentionally incomplete and may contain deployment, engineering, architectural
+and operational issues.
+Project Requirements
+• Deploy Fortis.
+• Troubleshoot issues and resolve failures.
+• Make the system operational.
+• Validate core functionality.
+• Evaluate performance and security-relevant behaviour.
+• Implement meaningful enhancements.
+• Demonstrate engineering competence and independent decision-making.
+• Identify the security-operations roles who will use Fortis, and shape your enhancements
+around their responsibilities and workflows.
+Assessment principle: Getting Fortis operational represents the minimum pass threshold.
+Higher achievement requires meaningful engineering, evaluation, originality, personalisation
+and measurable improvement. Students are not rewarded simply for adding large numbers
+of features.
+Your deliverables are:
+1. A forked public GitHub repository containing the modified and self-contained repository
+application files that can be cloned and deployed, along with a report.pdf written as your
+professional report.
+2. A YouTube video presentation (max 10 minutes) embedded/linked in the GitHub repository.
+3. Evidence of continuous improvement on your GitHub repo across at least two weeks,
+shown by commit frequency and timestamps.
+This format reflects industry practice, where professionals document security investigations publicly
+or internally using markdown and version control.
+Acceptable level of generative AI tool use in this coursework element
+Partnered
+Work
+P1 – Generative AI tool use forms an integral part of the
+assessment and is compliant with the assessment brief. ☒
+Table 7: Acceptable Level of generative AI use
+COMP3010 Security Operations & Incident Management
+Project Structure
+Stage 1 – Platform Deployment and Validation
+Deploy Fortis, troubleshoot issues, resolve failures and demonstrate operation. This stage
+represents the minimum pass threshold.
+Stage 2 – Knowledge Validation
+Test Fortis against training datasets, sample laboratory questions and validation exercises.
+Identify weaknesses, record failures and evaluate response quality.
+Stage 3 – Engineering Enhancements
+Implement meaningful extensions and justify engineering decisions rather than adding features
+without a clear purpose.
+Enhancement Categories
+Category Indicative examples
+Harness
+Engineering
+Evaluation pipelines; benchmark automation; regression testing;
+scoring frameworks; performance dashboards.
+Knowledge
+Evaluation
+Additional datasets; security examination questions; incidentresponse datasets; ATT&CK-based testing; analyst playbooks.
+Threat Intelligence
+Integration
+ATT&CK; MISP; STIX/TAXII; NVD; CISA feeds; vendor advisories;
+threat-report ingestion.
+AI Agent
+Engineering
+Autonomous feed collection; multi-agent orchestration; research
+agents; threat-enrichment agents; report-generation agents.
+RAG Improvements Better chunking; hybrid retrieval; re-ranking; metadata filtering;
+context optimisation.
+Multimodal
+Improvements PDF ingestion; image analysis; diagram interpretation; IOC extraction.
+Analyst Productivity Chatbot support; report generation; executive summaries; SOC
+workflow integrations.
+Table 8: Possible Enhancement by Category
+Originality and Personalisation
+Students may implement enhancements from similar categories, but the overall combination of
+features and engineering decisions must be demonstrably individual.
+• Students must justify why enhancements were selected.
+• Students must explain implementation choices and alternatives considered.
+• Students must discuss technical trade-offs and limitations.
+• Marks are awarded for engineering decisions and demonstrated value rather than feature
+count.
+• Students must maintain evidence of independent development, technical decision-making,
+iterative testing and progressive improvement.
+COMP3010 Security Operations & Incident Management
+Minimum Personalisation Requirements
+Requirement Minimum expectation Examples
+Engineering
+enhancement At least one Evaluation harness; CI/CD testing; monitoring;
+benchmark automation
+Security
+enhancement At least one ATT&CK integration; CVE enrichment; IOC
+extraction; threat-intelligence ingestion
+Innovation
+enhancement At least one AI agents; multimodal RAG; chatbot capabilities;
+autonomous workflows
+Original
+dataset At least one
+Threat reports; vendor advisories; SOC playbooks; IR
+guides; threat-actor reports; CVE collections;
+ATT&CK procedures
+Additional
+evaluation
+metric
+At least one Accuracy; hallucination rate; recall; precision; retrieval
+quality; citation quality; analyst usefulness; latency
+Table 9: Personalisation Requirements
+Students must justify the choice and value of their dataset and evaluation metric.
+Coursework 2 Deliverables
+1. Technical Report (report.pdf – submitted on DLE and also found on forked repo)
+Maximum 2,500 words, excluding references, screenshots, appendices, evaluation data and AI
+reflection.
+Suggested section Purpose
+Introduction Define the problem, objectives and securityoperations context.
+Deployment & Troubleshooting Document deployment, failures, diagnosis and
+resolution.
+Evaluation Methodology Define datasets, tests, metrics and validation
+approach.
+Validation Results Present results, limitations and evidence.
+Enhancements Implemented Describe and justify engineering work.
+Engineering Decisions Explain alternatives, trade-offs and design rationale.
+Operational Use in Security
+Operations
+Identify the security-operations roles who will use
+Fortis and explain how your augmentations will be
+use in the organisation’s operations – SOC
+workflows, incident-handling phases, escalation and
+GRC matters.
+Critical Evaluation Assess effectiveness, security implications and
+remaining weaknesses.
+Future Work Identify justified next steps.
+Conclusion Summarise contribution and evidence-based
+outcomes.
+
+
+Your project is a comprehensive cybersecurity enhancement initiative that aligns with modern Security Operations Centre (SOC) practices. Below is a structured approach to tackle this coursework, ensuring alignment with the assessment criteria and deliverables:
+
+---
+
+### **1. Project Overview & Objectives**
+**Goal**: Enhance the **Fortis** AI-powered cybersecurity adviser to improve operational efficiency, security, and usability for SOC teams.  
+**Key Focus Areas**:  
+- **Deployment & Troubleshooting**  
+- **Validation & Evaluation**  
+- **Engineering Enhancements** (at least one from each category: Engineering, Security, Innovation)  
+- **Original Dataset & Evaluation Metrics**  
+
+---
+
+### **2. Stage 1: Platform Deployment & Validation**
+#### **Tasks**:  
+- **Deploy Fortis**:  
+  - Use the provided repository (forked from [https://github.com/kenobicjj/Fortis](https://github.com/kenobicjj/Fortis)).  
+  - Ensure dependencies (e.g., Python, Docker, AI frameworks) are installed.  
+  - Test deployment in a secure environment (e.g., AWS, GCP, or local VM).  
+- **Troubleshoot Failures**:  
+  - Address issues like:  
+    - Missing libraries (e.g., `transformers`, `langchain`).  
+    - API integration errors (e.g., MISP, STIX/TAXII).  
+    - RAG pipeline failures (e.g., chunking, retrieval quality).  
+  - Document failures, diagnoses, and resolutions in the **Deployment & Troubleshooting** section of your report.  
+
+#### **Deliverable**:  
+- A **GitHub repo** with a working deployment (e.g., Dockerized, CI/CD pipeline).  
+- A **report section** detailing deployment steps and troubleshooting.  
+
+---
+
+### **3. Stage 2: Knowledge Validation**
+#### **Tasks**:  
+- **Test Against Training Datasets**:  
+  - Use datasets like ATT&CK, MITRE, or custom threat reports.  
+  - Validate responses for accuracy, relevance, and security context.  
+- **Evaluate Response Quality**:  
+  - Metrics:  
+    - **Accuracy** (correctness of answers).  
+    - **Hallucination Rate** (false information generated).  
+    - **Recall/Precision** (coverage of relevant information).  
+  - Use tools like `tqdm` for progress tracking or `pytest` for automated testing.  
+
+#### **Deliverable**:  
+- A **Validation Results** section in the report with test cases, metrics, and limitations.  
+- A **dataset** (e.g., ATT&CK MITRE dataset or custom threat reports) in the repo.  
+
+---
+
+### **4. Stage 3: Engineering Enhancements**
+#### **Enhancement Categories (Choose at Least One from Each)**:  
+
+| **Category**         | **Example Enhancements**                                                                 |  
+|----------------------|------------------------------------------------------------------------------------------|  
+| **Engineering**      | CI/CD pipeline, performance dashboard, benchmark automation, regression testing.         |  
+| **Security**         | ATT&CK integration, CVE enrichment, IOC extraction, threat-intelligence ingestion.      |  
+| **Innovation**       | AI agents (e.g., autonomous feed collection), multimodal RAG (PDF/image analysis), chatbots. |  
+
+#### **Example Implementation**:  
+- **Threat Intelligence Integration**:  
+  - Add **MISP** or **STIX/TAXII** support to ingest real-time threat feeds.  
+  - Use Python libraries like `misp-regex` or `stix2` for parsing.  
+  - Store enriched data in a database (e.g., PostgreSQL) for quick lookup.  
+- **RAG Improvements**:  
+  - Optimize chunking (e.g., split long documents into smaller segments).  
+  - Implement **hybrid retrieval** (combine keyword and semantic search).  
+  - Add **metadata filtering** (e.g., filter by threat actor or severity).  
+
+#### **Deliverable**:  
+- Code changes in the GitHub repo (e.g., new scripts, API integrations).  
+- A **report section** explaining enhancements, trade-offs, and alternatives.  
+
+---
+
+### **5. Original Dataset & Evaluation Metric**
+#### **Example Dataset**:  
+- **Threat Reports**: Use CISA advisories or vendor-specific reports (e.g., Microsoft, Cisco).  
+- **SOC Playbooks**: Include incident response (IR) guides or ATT&CK procedures.  
+
+#### **Example Metric**:  
+- **Analyst Usefulness**: Score responses based on clarity, actionable insights, and alignment with SOC workflows.  
+- **Latency**: Measure response time for critical queries (e.g., IOC lookup).  
+
+#### **Deliverable**:  
+- Dataset files in the repo (e.g., `threat_reports.csv`, `attck_procedures.json`).  
+- A **report section** justifying the dataset and metric (e.g., "This dataset ensures real-world relevance for SOC analysts").  
+
+---
+
+### **6. Operational Use in Security Operations**
+#### **Identify Roles & Workflows**:  
+- **SOC Analysts**: Use Fortis for triaging alerts, generating reports, and researching threats.  
+- **Incident Responders**: Leverage chatbot capabilities for quick IOC lookups during incidents.  
+- **Threat Hunters**: Use RAG for contextual analysis of ATT&CK techniques.  
+
+#### **Integration Ideas**:  
+- **SOC Workflow Integration**: Embed Fortis in tools like Splunk or SIEM platforms.  
+- **Automated Escalation**: Use AI agents to escalate high-severity threats to the right teams.  
+
+#### **Deliverable**:  
+- A **report section** mapping enhancements to specific roles and workflows.  
+
+---
+
+### **7. Critical Evaluation & Future Work**
+#### **Assess Effectiveness**:  
+- **Security Implications**: Ensure threat intelligence integration doesn’t expose sensitive data.  
+- **Remaining Weaknesses**: Address limitations like hallucination rates or RAG performance.  
+
+#### **Future Work**:  
+- **Multimodal Improvements**: Add PDF/image analysis for threat reports.  
+- **Autonomous Workflows**: Implement AI agents for continuous feed collection.  
+
+#### **Deliverable**:  
+- A **critical evaluation** section in the report.  
+
+---
+
+### **8. Report Structure**
+**Sections to Include**:  
+1. **Introduction**: Problem statement, objectives, and security context.  
+2. **Deployment & Troubleshooting**: Steps taken, failures resolved.  
+3. **Evaluation Methodology**: Datasets, tests, and metrics.  
+4. **Validation Results**: Results, limitations, and evidence.  
+5. **Enhancements Implemented**: Details of each enhancement.  
+6. **Engineering Decisions**: Trade-offs (e.g., RAG vs. keyword search).  
+7. **Operational Use**: How Fortis supports SOC workflows.  
+8. **Critical Evaluation**: Effectiveness and security implications.  
+9. **Future Work**: Justified next steps.  
+10. **Conclusion**: Summary of contributions and outcomes.  
+
+---
+
+### **9. GitHub Repository & Video**
+- **Repo Structure**:  
+  - `docs/` (for documentation and report).  
+  - `scripts/` (for automation and testing).  
+  - `data/` (for datasets and evaluation metrics).  
+  - `models/` (for AI models and RAG pipelines).  
+- **YouTube Video**:  
+  - 10-minute summary of:  
+    - Deployment process.  
+    - Enhancements implemented.  
+    - Validation results.  
+    - Operational use cases.  
+
+---
+
+### **10. Tips for Success**
+- **Version Control**: Commit frequently with meaningful messages (e.g., "Fixed MISP API error").  
+- **Documentation**: Use markdown for reports and GitHub README.  
+- **Originality**: Focus on **engineering decisions** (e.g., "Why choose hybrid retrieval over keyword search?").  
+- **Justification**: Explain how enhancements align with SOC workflows (e.g., "Chatbot reduces analyst time by 30%").  
+
+---
+
+### **Example Enhancement Plan**
+| **Enhancement**                | **Implementation**                                                                 |  
+|-------------------------------|------------------------------------------------------------------------------------|  
+| **ATT&CK Integration**        | Parse MITRE ATT&CK datasets, enrich queries with TTPs, and validate against known techniques. |  
+| **RAG Improvements**          | Optimize chunking, add metadata filtering (e.g., filter by threat actor).         |  
+| **AI Agent for IOC Lookup**   | Build a chatbot agent that auto-queries IOC databases and returns results.        |  
+
+---
+
+By following this plan, you’ll meet the **minimum pass threshold** and achieve higher marks through **originality**, **engineering decisions**, and **measurable improvements**. Let me know if you need help with specific code implementations or report sections! 🛡️
+
+
+
+######################################################################################################################################
+
+Okay so I have completed most of stage 1. I have Fortis deployed to my laptop, I have fixed a few errors and now it opens. I waited about 24hrs then tried again and it started again. What should my next steps be. I am thinking of started with an original data set. What would you suggest ?
+
+
+Great progress on Stage 1! Now that Fortis is operational, the next steps should focus on **Stage 2 (Knowledge Validation)** and **Stage 3 (Engineering Enhancements)**. Starting with an **original dataset** is a solid choice, as it directly addresses the **Minimum Personalisation Requirements** (Table 9). Here’s a structured plan to guide you:
+
+---
+
+### **1. Choose an Original Dataset (Stage 2 & 3)**
+#### **Why It Matters**:  
+- Validates Fortis’s ability to process and respond to real-world security data.  
+- Demonstrates alignment with SOC workflows (e.g., threat reports, incident response).  
+- Supports evaluation metrics like **analyst usefulness** or **hallucination rate**.  
+
+#### **Recommended Datasets** (Choose One That Aligns With Your Enhancements):  
+| **Dataset Type**         | **Examples**                                                                 | **Why Choose This**                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| **Threat Intelligence**  | CISA Advisories, MITRE ATT&CK Techniques, OpenCTI feeds, MISP datasets       | Directly ties to **security enhancements** (e.g., IOC extraction, ATT&CK integration). |
+| **Incident Reports**     | MITRE ATT&CK MITRE Dataset, Microsoft Threat Intelligence, SOC Playbooks    | Validates **RAG improvements** (e.g., chunking, metadata filtering).               |
+| **CVE/Exploit Data**     | NVD CVE Database, CVE Details, ExploitDB                                     | Supports **security enhancements** (e.g., CVE enrichment, threat intelligence).   |
+| **Threat Actor Reports** | Recorded Future, CrowdStrike Falcon, Mandiant Reports                        | Aligns with **multimodal RAG** (e.g., PDF analysis of threat actor reports).       |
+| **SOC Playbooks**        | MITRE ATT&CK Playbooks, Microsoft SOC Playbooks, IBM X-Force Playbooks      | Supports **analyst productivity** (e.g., chatbot-generated summaries).            |
+
+#### **Implementation Tips**:  
+- **Format**: Use structured formats like JSON or CSV for easy parsing.  
+- **Source**: Use public datasets (e.g., [MITRE ATT&CK](https://attack.mitre.org/), [NVD](https://nvd.nist.gov/), [CISA](https://www.cisa.gov/)).  
+- **Storage**: Place the dataset in a `data/` folder in your repo (e.g., `data/attck_procedures.json`, `data/cisa_advisories.csv`).  
+
+---
+
+### **2. Validate Fortis Against the Dataset (Stage 2)**
+#### **Tasks**:  
+- **Test Core Functionality**:  
+  - Use the dataset to query Fortis (e.g., "What are the TTPs in ATT&CK technique T1059?").  
+  - Measure **accuracy**, **hallucination rate**, and **response latency**.  
+- **Evaluate RAG Performance**:  
+  - Test how well Fortis handles **chunking**, **retrieval quality**, and **context optimization**.  
+  - Use tools like `tqdm` for progress tracking or `pytest` for automated testing.  
+- **Document Failures**:  
+  - Record cases where Fortis fails to answer or provides incorrect information.  
+
+#### **Example Evaluation Metrics**:  
+- **Accuracy**: % of correct answers.  
+- **Hallucination Rate**: % of responses with fabricated information.  
+- **Response Time**: Average time to generate a query.  
+- **Analyst Usefulness**: Score based on clarity and actionable insights (e.g., 1-5 scale).  
+
+#### **Deliverable**:  
+- A **Validation Results** section in your report, including test cases, metrics, and limitations.  
+- Store the dataset and evaluation script in your repo (e.g., `scripts/validate_attck.py`).  
+
+---
+
+### **3. Implement Engineering Enhancements (Stage 3)**
+#### **Choose One Enhancement from Each Category** (Engineering, Security, Innovation):  
+| **Category**         | **Enhancement Ideas**                                                                 |  
+|----------------------|----------------------------------------------------------------------------------------|  
+| **Engineering**      | Add a **CI/CD pipeline** (e.g., GitHub Actions for automated testing), **performance dashboard**, or **benchmark automation**. |  
+| **Security**         | Integrate **ATT&CK MITRE datasets**, **CVE enrichment**, **IOC extraction**, or **threat-intelligence ingestion** (e.g., MISP/STIX). |  
+| **Innovation**       | Build **AI agents** (e.g., autonomous feed collection, threat-enrichment agents), **multimodal RAG** (PDF/image analysis), or **chatbot support**. |  
+
+#### **Example Enhancements**:  
+1. **Threat Intelligence Integration**:  
+   - Use Python libraries like `misp-regex` or `stix2` to parse MISP/STIX feeds.  
+   - Store enriched data in a database (e.g., PostgreSQL) for quick lookup.  
+
+2. **RAG Improvements**:  
+   - Optimize chunking (e.g., split long documents into smaller segments).  
+   - Add **metadata filtering** (e.g., filter by threat actor or severity).  
+
+3. **Chatbot Support**:  
+   - Use a lightweight chatbot framework (e.g., `streamlit`, `gradio`) to allow SOC analysts to query Fortis via a CLI or web interface.  
+
+#### **Implementation Tips**:  
+- **Justify Choices**: Explain why you selected each enhancement (e.g., "Chatbots reduce analyst time by 30% during incident triage").  
+- **Document Trade-offs**: Discuss alternatives (e.g., "Hybrid retrieval vs. keyword search for RAG").  
+- **Version Control**: Commit changes with clear messages (e.g., "Added MISP integration for threat intelligence").  
+
+---
+
+### **4. Link Dataset and Enhancements to Operational Use**
+#### **Example**:  
+- **Dataset**: CISA Advisories.  
+- **Enhancement**: Threat intelligence integration.  
+- **Operational Use**: SOC analysts use Fortis to quickly check if a reported vulnerability (e.g., CVE-2023-1234) is in a CISA advisory.  
+
+#### **Deliverable**:  
+- A **report section** mapping datasets, enhancements, and their impact on SOC workflows.  
+
+---
+
+### **5. Plan for Future Work & Critical Evaluation**
+- **Future Work**:  
+  - Add **multimodal RAG** (e.g., PDF/image analysis of threat reports).  
+  - Implement **autonomous workflows** (e.g., AI agents for continuous feed collection).  
+- **Critical Evaluation**:  
+  - Assess **security implications** (e.g., data exposure risks from threat feeds).  
+  - Highlight **remaining weaknesses** (e.g., hallucination rates in RAG responses).  
+
+---
+
+### **6. GitHub Repository Structure**
+- **data/**: Original dataset files (e.g., `cisa_advisories.csv`, `attck_procedures.json`).  
+- **scripts/**: Validation scripts (e.g., `validate_attck.py`, `misp_integration.py`).  
+- **models/**: RAG pipeline files (e.g., `chunking_config.yaml`, `retrieval_model.py`).  
+- **docs/**: Report sections (e.g., `validation_results.md`, `enhancements.md`).  
+
+---
+
+### **7. Next Steps**
+1. **Select and Prepare Your Dataset** (e.g., CISA advisories or ATT&CK MITRE dataset).  
+2. **Validate Fortis Against the Dataset** (document results and failures).  
+3. **Implement 1 Enhancement from Each Category** (Engineering, Security, Innovation).  
+4. **Link Enhancements to Operational Use** (SOC workflows, incident response).  
+5. **Plan Future Work & Critical Evaluation** (security implications, weaknesses).  
+
+---
+
+If you’re unsure which dataset to choose, I’d recommend **CISA Advisories** or **MITRE ATT&CK MITRE Dataset** for their relevance to SOC operations. Let me know if you need help sourcing or structuring these datasets! 🛡️
+
+######################################################################################################################################
+
+Okay, For future reference lets try and keep a moderate length answer as that is a bit too long of an answer. I have found the https://github.com/mitre-attack/attack-stix-data/. Within this repo there is an enterprise-attack, ics-attack and mobile-attack directory. Each has a range of .json files. Is this what I need to download and use within Fortis ?
+
+
+You're on the right track! Writing a validation script will help you test Fortis’s ability to process and respond to the MITRE ATT&CK dataset. Here’s a **step-by-step guide** to building your script, tailored to your Python/Java/C++ background:
+
+---
+
+### **1. Define the Purpose of the Script**
+Your script should:  
+- Query Fortis with specific **ATT&CK technique IDs** (e.g., `T1059`, `T1060`).  
+- Measure **accuracy**, **hallucination rate**, and **response time**.  
+- Log failures or unexpected responses.  
+
+---
+
+### **2. How to Query Fortis**  
+Assuming Fortis has an API endpoint or CLI interface:  
+- **Example (Python HTTP Request)**:  
+  ```python
+  import requests
+  import time
+  import json
+
+  # Define Fortis endpoint
+  base_url = "http://localhost:5000/query"  # Adjust based on your deployment
+
+  # Example: Query ATT&CK technique T1059
+  response = requests.get(f"{base_url}?technique=T1059")
+  print(response.json())
+  ```
+
+- **Alternative (CLI)**:  
+  If Fortis is a CLI tool, use `subprocess` to run commands:  
+  ```python
+  import subprocess
+  result = subprocess.run(["python", "fortis_cli.py", "--technique", "T1059"], capture_output=True, text=True)
+  print(result.stdout)
+  ```
+
+---
+
+### **3. Parse the JSON Dataset**  
+Extract technique IDs and descriptions from the MITRE ATT&CK JSON files:  
+```python
+import json
+
+# Example: Parse a single JSON file
+with open("data/attack-stix-data/enterprise-attack/T1059.json") as f:
+    data = json.load(f)
+    technique_id = data["id"]  # e.g., "T1059"
+    description = data["description"]  # e.g., "Command and Scripting Interpreter"
+```
+
+---
+
+### **4. Create Test Cases**  
+Define a list of techniques to query:  
+```python
+test_cases = [
+    {"technique_id": "T1059", "expected_description": "Command and Scripting Interpreter"},
+    {"technique_id": "T1060", "expected_description": "Exploit Public-Facing Application"},
+    # Add more test cases
+]
+```
+
+---
+
+### **5. Measure Metrics**  
+- **Accuracy**: Compare Fortis’s response to the expected description.  
+- **Hallucination Rate**: Check for fabricated or irrelevant information.  
+- **Response Time**: Log the time taken for each query.  
+
+```python
+results = []
+for case in test_cases:
+    start_time = time.time()
+    response = requests.get(f"{base_url}?technique={case['technique_id']}")
+    elapsed_time = time.time() - start_time
+    result = {
+        "technique": case["technique_id"],
+        "response": response.json(),
+        "elapsed_time": elapsed_time,
+        "accuracy": "Pass" if response.json()["description"] == case["expected_description"] else "Fail"
+    }
+    results.append(result)
+```
+
+---
+
+### **6. Log Failures and Metrics**  
+Store results in a file or database for analysis:  
+```python
+with open("validation_results.json", "w") as f:
+    json.dump(results, f)
+```
+
+---
+
+### **7. Example Output**  
+Your script could output a summary like:  
+```
+Test Case: T1059
+- Accuracy: Pass
+- Response Time: 0.45s
+- Response: {"description": "Command and Scripting Interpreter", "tactics": ["Execution"]}
+```
+
+---
+
+### **8. Advanced Ideas (Optional)**  
+- **Automate Testing**: Use `pytest` or `unittest` for structured testing.  
+- **Visualize Results**: Use `matplotlib` to plot accuracy vs. response time.  
+- **Compare Models**: If you’re testing multiple RAG versions, compare hallucination rates.  
+
+---
+
+### **9. What to Include in Your Report**  
+- **Script Logic**: Explain how the script queries Fortis and evaluates responses.  
+- **Results**: Include metrics like accuracy, hallucination rate, and response time.  
+- **Challenges**: Mention any issues (e.g., "Fortis failed to parse T1059 due to chunking errors").  
+
+---
+
+### **10. Next Steps**  
+1. Write the script using Python (or Java/C++ if preferred).  
+2. Run it against the MITRE ATT&CK dataset.  
+3. Document results in your report and GitHub repo.  
+
+Let me know if you need help structuring the script or parsing the JSON data! 🛡️
+
+
+######################################################################################################################################
+
+
+
+
+
